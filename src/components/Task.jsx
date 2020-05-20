@@ -11,16 +11,21 @@ function Task({task, deleteTask, toggleDone}){
     };
 
     return (
-        <div style={{display:"flex", textAlign:"center"}}>
-            <input type="checkbox" onClick = {handleCheckBox} />
-            <span
-                style = {{
-                    textDecoration: task.done ? "line-through" : null
-                }}
-            >
-                {task.content}
-            </span>
-            <button onClick = {handleDeleteTask}>X</button>
+        <div className = "border border-black rounded mb-4">
+            <div className= "flex items-center justify-around">
+                <input className = "m-6 " type="checkbox" onClick = {handleCheckBox} />
+                <span
+                className = "w-2/3"
+                    style = {{
+                        textDecoration: task.done ? "line-through" : null
+                    }}
+                >
+                    {task.content}
+                </span>
+                <button
+                className =  "m-6"
+                onClick = {handleDeleteTask}>Delete</button>
+            </div>
         </div>
     )
 };

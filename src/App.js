@@ -50,8 +50,8 @@ function App() {
 
   
   return (
-    <div style={{width:"fit-content", margin: "auto"}}>
-      <h1>Add an item to your list </h1>
+    <div className = "main" style={{width:"fit-content", margin: "auto"}}>
+      <h1 className = "font-bold text-3xl text-center p-4 mb-4">To-do list </h1>
       <TaskInput addTask={addTask}/>
       <TaskList tasks = {tasks} deleteTask = {deleteTask} toggleDone={toggleDone}/>
     </div>

@@ -26,7 +26,6 @@ function TaskInput({addTask}) {
         }
     };
     
-    
 
     return (
     <div>
@@ -35,8 +34,9 @@ function TaskInput({addTask}) {
             value = {task.content}
             onChange={handleInput}
             placeholder="enter a task"
+            className = "border border-black p-4 m-6"
             />
-            <button>Add</button>
+            <button className = "m-6 p-6 border border-black rounded" >Add</button>
         </form>
     </div>
     )
